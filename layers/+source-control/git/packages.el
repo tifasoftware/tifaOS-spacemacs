@@ -24,6 +24,7 @@
 (defconst git-packages
   '(
     evil-collection
+    evil-snipe
     fill-column-indicator
     ;; forge requires a C compiler on Windows so we disable
     ;; it by default on Windows.
@@ -49,7 +50,6 @@
     smeargle
     transient))
 
-
 (defun git/pre-init-golden-ratio ()
   (spacemacs|use-package-add-hook golden-ratio
     :post-config
@@ -61,6 +61,13 @@
     ;; See `git-packages' form in this file.
     (unless (spacemacs/system-is-mswindows)
       (add-to-list 'spacemacs-evil-collection-allowed-list 'forge))))
+
+(defun git/post-init-evil-snipe ()
+  (add-hook 'magit-mode-hook 'turn-off-evil-snipe-mode)
+  (add-hook 'git-rebase-mode-hook 'turn-off-evil-snipe-mode)
+  (when evil-snipe-enable-alternate-f-and-t-behaviors
+    (add-hook 'magit-mode-hook 'turn-off-evil-snipe-override-mode)
+    (add-hook 'git-rebase-mode-hook 'turn-off-evil-snipe-override-mode)))
 
 (defun git/post-init-fill-column-indicator ()
   (add-hook 'git-commit-mode-hook 'fci-mode))
