@@ -40,21 +40,21 @@ the [full installation instructions](#install) for other options.
 
 * For stable releases:
   ```shell
-  git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+  git clone https://github.com/tifasoftware/tifaOS-spacemacs ~/.emacs.d
   ```
 
 * For development updates and participation:
   ```shell
-  git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
+  git clone -b develop https://github.com/tifasoftware/tifaOS-spacemacs ~/.emacs.d
   ```
   * Windows Command Prompt:
     ```
-    git clone -b develop https://github.com/syl20bnr/spacemacs %appdata%/.emacs.d
+    git clone -b develop https://github.com/tifasoftware/tifaOS-spacemacs %appdata%/.emacs.d
     ```
 
     Windows PowerShell:
     ```powershell
-    git clone -b develop https://github.com/syl20bnr/spacemacs $env:appdata/.emacs.d
+    git clone -b develop https://github.com/tifasoftware/tifaOS-spacemacs $env:appdata/.emacs.d
     ```
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
